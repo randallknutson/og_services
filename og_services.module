@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Services 3.x Module hook_services_resource_alter.
+ *
+ * Add subscription action and lookups.
+ */
+function og_services_services_resources_alter(&$resources, $endpoint) {
+  include_once(drupal_get_path('module', 'og_services') . '/og_services.inc');
+  _og_services_services_resources_alter($resources, $endpoint);
+}
